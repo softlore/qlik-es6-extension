@@ -1,0 +1,42 @@
+#qlik-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 150px;
+  border-radius: 6px;
+  margin: 50px auto;
+  box-shadow: 1px 5px 5px #d2d2d2;
+}
+
+#qlik-counter-text {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.qlik-counter-button {
+  border: none;
+  padding: 7.5px 15px;
+  outline: none;
+  margin-right: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.qlik-counter-button:nth-child(1) {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.qlik-counter-button:nth-child(2) {
+  background-color: red;
+  color: white;
+}
+#hello-world{
+    font-family: sans-serif;
+    color: cornflowerblue
+}

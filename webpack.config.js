@@ -54,6 +54,8 @@ module.exports = {
         ]
     },
     externals: {
-        qlik: "qlik"
+        qlik: "qlik",
+        qr: "require",
+        jquery: "jquery"
     }
 };
