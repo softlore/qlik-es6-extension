@@ -1,24 +1,14 @@
-import $ from "jquery";
+import React, { useState } from "react";
 import "./style.css";
-import html from "./template.html";
 
-let counter = 0;
+export const CounterComponent = () => {
+    const [count, setCount] = useState(0);
 
-export const CounterComponent = (rootElement) => {
-    const template = $(rootElement);
-
-    template.empty();
-    template.append(html);
-
-    const btns = template.find(".qlik-counter-button");
-
-    btns.eq(0).on("click", _ => {
-        counter = counter + 1;
-        template.find("#qlik-counter-text").html(counter);
-    });
-
-    btns.eq(1).on("click", _ => {
-        counter = counter - 1;
-        template.find("#qlik-counter-text").html(counter);
-    });
+    return <div id="qlik-counter">
+        <span id="qlik-counter-text">{count}</span>
+        <div id="qlik-button-container">
+            <button className="qlik-counter-button" onClick={_ => setCount(count + 1)}>Increment</button>
+            <button className="qlik-counter-button" onClick={_ => setCount(count - 1)}>Decrement</button>
+        </div>
+    </div>;
 };

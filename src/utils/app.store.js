@@ -9,6 +9,7 @@ class AppStore {
         this.qlikApp = null;
         this.ele = null;
         this.layout = null;
+        this.painted = false;
     }
 
     updateInstance(context, ele, layout){

@@ -1,4 +1,6 @@
 import qr from "qr";
+import React from "react";
+import ReactDOM from "react-dom";
 import { CounterComponent } from "./components/counter";
 import { HelloWorldComponent } from "./components/hello-world";
 import { appStore } from "./utils/app.store";
@@ -12,8 +14,15 @@ qr(["css!" + cssFile]);
 export default {
     paint: function ($elem, layout) {
         appStore.updateInstance(this, $elem, layout);
-        
-        HelloWorldComponent($elem[0]);
-        // CounterComponent($elem[0]);
+  
+        if(!appStore.painted){
+            appStore.painted = true;
+
+            ReactDOM.render(
+                // <HelloWorldComponent/>,
+                <CounterComponent/>,
+                $elem[0]
+            );
+        }
     }
 };
