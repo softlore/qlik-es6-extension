@@ -3,9 +3,6 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { appName, outputPath } = require("./qlik.config");
 const cwd = process.cwd();
-const createQextFile = require("./createQextFile");
-
-createQextFile();
 
 module.exports = {
     entry: path.join(cwd, "src", "index.js"),    
@@ -50,6 +47,13 @@ module.exports = {
             {
                 test: /\.html/,
                 use: ["html-loader"]
+            },
+            {
+                test: /\.qext$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[name][ext]'
+                }
             }
         ]
     },

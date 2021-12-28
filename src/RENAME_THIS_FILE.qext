@@ -1,0 +1,7 @@
+{
+    "name": "EXTENSION_NAME",
+    "description": "Your extension description",
+    "type": "visualization",
+    "version": "1.0.0",
+    "author": "author"
+} 
