@@ -2,6 +2,7 @@ import qr from "qr";
 import { CounterComponent } from "./components/counter";
 import { HelloWorldComponent } from "./components/hello-world";
 import { appStore } from "./utils/app.store";
+import "./RENAME_THIS_FILE.qext";
 
 /**
  * To load resources only once require it before the paint function
